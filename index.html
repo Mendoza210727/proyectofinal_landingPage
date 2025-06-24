@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Creative Design landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Code Cloud | Soluciones Con Codigo</title>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Bootstrap + Creative Design main styles -->
+    <link rel="stylesheet" href="assets/css/creative-design.css">
+
+    <!-- Chatbot Styles -->
+    <style hr>
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.chatbot-window {
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+}
+
+.chatbot-header {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chatbot-messages {
+    padding: 16px;
+    flex: 1;
+    overflow-y: auto;
+    background: #f7f9fc;
+}
+
+.message {
+    margin-bottom: 15px;
+}
+
+.message-content {
+    background: #e9f0fb;
+    padding: 10px 15px;
+    border-radius: 8px;
+    max-width: 95%;
+    font-size: 14px;
+}
+
+.quick-actions {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.quick-action {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.quick-action:hover {
+    background-color: #0056b3;
+}
+
+.chatbot-input {
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background-color: white;
+}
+
+.input-group {
+    display: flex;
+}
+
+#chatInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+}
+
+.send-btn {
+    background-color: #007bff;
+    border: none;
+    padding: 0 15px;
+    color: white;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.chatbot-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+/* Animación de escribiendo */
+.typing-dots {
+    font-style: italic;
+    color: #777;
+}
+
+.typing-dots .dot {
+    animation: blink 1.4s infinite;
+}
+
+.typing-dots .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dots .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0%, 20% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+    </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav id="scrollspy" class="navbar page-navbar navbar-light navbar-expand-md fixed-top" data-spy="affix"
+        data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong class="text-primary">Code</strong> <span
+                    class="text-dark">Cloud</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Conocenos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testmonial">Referencias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contactanos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+    <!-- Page Header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content">
+            <p>Soluciones en codigo para el dia a dia..</p>
+            <h6>Code Cloud</h6>
+        </div>
+    </header><!-- End of Page Header -->
+
+    <!-- About Section -->
+    <section id="about">
+        <!-- Container -->
+        <div class="container">
+            <!-- About wrapper -->
+            <div class="about-wrapper">
+                <div class="after">
+                    <h1>Conocenos</h1>
+                </div>
+                <div class="content">
+                    <h5 class="title mb-3">Conoce mas de Code Cloud</h5>
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col">
+                            <p>En <b>Code Cloud</b>, nos dedicamos a crear soluciones de software innovadoras y
+                                personalizadas para empresas medianas en Santa Cruz, Bolivia. Nuestro objetivo es
+                                simplificar y optimizar los procesos diarios de nuestros clientes, permitiéndoles
+                                enfocarse en lo que realmente importa: hacer crecer su negocio.</p>
+                            <p><b>Creemos en el poder de la tecnología para transformar y potenciar los recursos de las
+                                    empresas, ofreciendo herramientas que marcan la diferencia.</b></p>
+                            <p>Nuestro equipo está formado por profesionales apasionados por la tecnología,
+                                comprometidos con la excelencia y la satisfacción de nuestros clientes. Trabajamos de la
+                                mano con cada empresa para entender sus necesidades y ofrecer soluciones a medida que se
+                                adapten a sus desafíos específicos.</p>
+                            <p>En <b>Code Cloud</b>, no solo desarrollamos software, sino que construimos relaciones de
+                                confianza y colaboración con nuestros clientes.</p>
+                        </div>
+                        <div class="col">
+                            <p>Nos especializamos en el desarrollo de aplicaciones y sistemas que automatizan procesos,
+                                mejoran la eficiencia y reducen costos. Ya sea que necesites gestionar inventarios,
+                                optimizar la atención al cliente o mejorar la comunicación interna, en <b>Code Cloud</b>
+                                tenemos la solución ideal para ti.</p>
+                            <p>Además, ofrecemos soporte continuo y actualizaciones constantes para garantizar que tu
+                                software siempre esté al día con las últimas tendencias tecnológicas.</p>
+                            <p>En un mundo donde la tecnología avanza rápidamente, en <b>Code Cloud</b> nos
+                                comprometemos a ser tu aliado estratégico en la transformación digital. Juntos, podemos
+                                llevar tu empresa al siguiente nivel.</p>
+                        </div>
+                    </div><!-- End of Row -->
+
+                </div>
+            </div><!-- End of About Wrapper -->
+        </div> <!-- End of Container-->
+    </section><!--End of Section -->
+
+
+    <!-- section -->
+    <section>
+        <!-- Container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-6">
+                    <div class="img-wrapper">
+                        <div class="after"></div>
+                        <img src="assets/imgs/img-5.jpg" class="w-100" alt="About Us">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <h6 class="title mb-3">Soluciones de software a medida para tu negocio</h6>
+
+                    <p>En <b>Code Cloud</b>, desarrollamos software personalizado que se adapta a las necesidades
+                        específicas de tu empresa. Nuestras soluciones están diseñadas para optimizar procesos, mejorar
+                        la eficiencia y reducir costos, permitiéndote enfocarte en el crecimiento de tu negocio.</p>
+                    <p class="text-muted">Desde sistemas de gestión hasta aplicaciones móviles, en Code Cloud tenemos la
+                        herramienta perfecta para impulsar tu empresa.</p>
+                </div>
+            </div>
+            <!-- End of Row -->
+        </div>
+        <!-- End of Container -->
+    </section><!-- End of Section -->
+
+    <!-- section -->
+    <section>
+        <!-- Container -->
+        <div class="container">
+            <!-- Row -->
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-5">
+                    <h6 class="title mb-3">Soluciones tecnológicas a medida para todo tipo de empresas</h6>
+
+                    <p>En <b>Code Cloud</b>, desarrollamos sistemas de información diseñados para optimizar los procesos
+                        de todo tipo de empresas. Utilizamos tecnologías de vanguardia como <b>Python</b>, <b>React</b>,
+                        <b>Node.js</b>, y bases de datos <b>SQL</b> y <b>NoSQL</b> para crear soluciones robustas,
+                        escalables y adaptadas a las necesidades específicas de cada cliente.</p>
+                    <p class="text-muted">Nuestro enfoque se basa en la <b>innovación</b> y en ofrecer la <b>mejor
+                            solución a medida</b>, asegurando que cada sistema que desarrollamos impulse el crecimiento
+                        y la eficiencia de tu negocio.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-wrapper">
+                        <div class="after right"></div>
+                        <img src="assets/imgs/img-2.jpg" class="w-100" alt="About Us">
+                    </div>
+                </div>
+            </div><!-- End of Row -->
+        </div><!-- End of Container-->
+    </section><!-- End of Section -->
+
+
+    <!-- Features Section -->
+    <section class="has-bg-img" id="features">
+        <div class="overlay"></div>
+        <!-- Button trigger modal -->
+        <div class="text-center text-light d-flex align-items-center justify-content-center mt-4">
+            <h4 class="text-light">"Code Cloud: Transformando ideas en soluciones digitales."</h4>
+        </div>
+
+    </section><!-- End of features Section -->
+
+    <!-- Section -->
+    <section>
+        <!-- Container -->
+        <div class="container">
+            <!-- Row -->
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-6">
+                    <div class="img-wrapper">
+                        <div class="after"></div>
+                        <img src="assets/imgs/img-6.jpg" class="w-100" alt="About us">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <h6 class="title mb-3">Ubicados en Santa Cruz, listos para atenderte</h6>
+
+                    <p>En <b>Code Cloud</b>, nos encontramos en el corazón de Santa Cruz, Bolivia, desde donde brindamos
+                        soluciones de software innovadoras a empresas medianas. Nuestra ubicación estratégica nos
+                        permite estar cerca de nuestros clientes, ofreciendo un servicio personalizado y de calidad.</p>
+                    <p class="text-muted">¡Contáctanos fácilmente! Estamos disponibles por teléfono, correo electrónico
+                        o visitas presenciales para escuchar tus necesidades y ofrecerte la mejor solución.</p>
+                </div>
+            </div><!-- End of Row -->
+        </div><!-- End of Container-->
+    </section><!-- End of Section -->
+
+    <!-- Testmonial Section -->
+    <section class="text-center pt-5" id="testmonial">
+        <!-- Container -->
+        <div class="container">
+            <h3 class="mt-3 mb-5 pb-5">Lo que dicen nuestros clientes</h3>
+            <!-- Fila -->
+            <div class="row">
+                <div class="col-sm-10 col-md-4 m-auto">
+                    <div class="testmonial-wrapper">
+                        <img src="assets/imgs/avatar1.jpg" alt="Imagen del Cliente">
+                        <h6 class="title mb-3">María González</h6>
+                        <p>Code Cloud transformó nuestra manera de trabajar. El sistema que desarrollaron para nuestra
+                            empresa es intuitivo, eficiente y ha optimizado nuestros procesos. ¡Los recomiendo
+                            totalmente!</p>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md-4 m-auto">
+                    <div class="testmonial-wrapper">
+                        <img src="assets/imgs/avatar2.jpg" alt="Imagen del Cliente">
+                        <h6 class="title mb-3">Carlos Fernandez</h6>
+                        <p>Gracias a Code Cloud, pudimos automatizar tareas que antes nos tomaban horas. Su equipo es
+                            profesional, creativo y siempre está dispuesto a ayudar. ¡Excelente servicio!</p>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md-4 m-auto">
+                    <div class="testmonial-wrapper">
+                        <img src="assets/imgs/avatar3.jpg" alt="Imagen del Cliente">
+                        <h6 class="title mb-3">Lucía Fernández</h6>
+                        <p>El software que nos desarrollaron ha sido clave para el crecimiento de nuestro negocio. Es
+                            fácil de usar y se adapta perfectamente a nuestras necesidades. ¡Muy contentos con los
+                            resultados!</p>
+                    </div>
+                </div>
+            </div><!-- Fin de la Fila -->
+        </div><!-- Fin del Contenedor -->
+    </section><!-- End of Testmonial Section -->
+
+    <!-- Section -->
+    <section class="has-bg-img text-center text-light height-auto"
+        style="background-image: url(assets/imgs/bg-img-2.jpg)">
+        <h1 class="display-4">EL FUTURO ES HOY.</h1>
+    </section><!-- End of Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="text-center">
+        <!-- container -->
+        <div class="container">
+            <h1>CONTACTANOS</h1>
+            <p class="mb-5">¿Tienes preguntas o necesitas ayuda? ¡No dudes en contactarnos! <br>
+                En <b>Code Cloud</b>, creamos soluciones de software innovadoras y personalizadas para impulsar tu
+                negocio.
+                <br> Diseñamos sistemas eficientes, escalables y fáciles de usar, pensados para optimizar tus procesos y
+                llevarte al siguiente nivel.
+            </p>
+            <!-- Contact form -->
+            <form class="contact-form col-md-11 col-lg-9 mx-auto" onsubmit="sendEmail(event)">
+                <div class="form-row">
+                    <div class="col form-group">
+                        <input type="text" class="form-control" placeholder="Nombre" name="name" required>
+                    </div>
+                    <div class="col form-group">
+                        <input type="email" class="form-control" placeholder="Correo" name="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" name="message" value="Estimado equipo de CodeCloud, 
+                    Espero que este mensaje les encuentre bien. 
+                    Me pongo en contacto con ustedes 
+                    porque estoy interesado en conocer más sobre sus servicios de desarrollo de software 
+                    y cómo podrían ayudarme en un proyecto.">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-block" value="Enviar Mensaje">
+                </div>
+            </form>
+
+
+        </div><!-- End of Container-->
+    </section><!-- End of Contact Section -->
+
+    <!-- Section -->
+    <section class="pb-0">
+        <!-- Container -->
+        <div class="container">
+            <!-- Pre footer -->
+            <div class="pre-footer">
+                <ul class="list">
+                    <li class="list-head">
+                        <h6 class="font-weight-bold"> SOBRE NOSOTROS</h6>
+                    </li>
+                    <li class="list-body">
+                        <p>
+                            En Code Cloud, nos dedicamos a crear soluciones de software
+                            innovadoras y personalizadas para empresas medianas en Santa Cruz, Bolivia.
+                            Nuestro objetivo es simplificar y optimizar los procesos diarios de
+                            nuestros clientes, permitiéndoles enfocarse en lo que realmente importa: hacer crecer su
+                            negocio.
+                        </p>
+                        <a href="#"><strong class="text-primary">Code</strong> <span class="text-dark">Cloud</span></a>
+                    </li>
+                </ul>
+                <ul class="list">
+
+                </ul>
+                <ul class="list">
+                    <li class="list-head">
+                        <h6 class="font-weight-bold">CONTACTANOS</h6>
+                    </li>
+                    <li class="list-body">
+                        <p>Contactanos en cualquier momento, las 24 horas del dia.</p>
+                        <p><i class="ti-location-pin"></i> Santa Cruz de la Sierra - Boliva</p>
+                        <p><i class="ti-email"></i> info@website.com</p>
+                        <div class="social-links">
+                            <a href="#" class="link"><i class="ti-facebook"></i></a>
+                            <a href="#" class="link"><i class="ti-twitter-alt"></i></a>
+                            <a href="#" class="link"><i class="ti-google"></i></a>
+                            <a href="#" class="link"><i class="ti-pinterest-alt"></i></a>
+                            <a href="#" class="link"><i class="ti-instagram"></i></a>
+                            <a href="#" class="link"><i class="ti-rss"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div><!-- End of Pre footer -->
+
+            <!-- foooter -->
+            <footer class="footer">
+                <p>Copyright
+                    <script>document.write(new Date().getFullYear())</script> &copy; <a href="#">CodeCloud</a>
+                </p>
+            </footer><!-- End of Footer-->
+
+        </div><!--End of Container -->
+    </section><!-- End of Section -->
+
+    <!-- Chatbot -->
+<div class="chatbot-container">
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <h6 style="margin: 0;">🤖 Asistente Virtual de <span style="color: #007bff;">Code Cloud</span></h6>
+            <button class="chatbot-close" onclick="toggleChatbot()">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot">
+                <div class="message-content">
+                    ¡Hola! 👋 Soy tu asistente virtual de <strong>Code Cloud</strong>. ¿En qué puedo ayudarte hoy?
+                    <div class="quick-actions">
+                        <button class="quick-action" onclick="askQuestion('servicios')">🛠 Servicios</button>
+                        <button class="quick-action" onclick="askQuestion('contacto')">📬 Contacto</button>
+                        <button class="quick-action" onclick="askQuestion('empresa')">🏢 Nosotros</button>
+                        <button class="quick-action" onclick="askQuestion('proyectos')">📂 Proyectos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="typing-indicator" id="typingIndicator" style="display: none;">
+            <span class="typing-dots">Escribiendo<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></span>
+        </div>
+        <div class="chatbot-input">
+            <div class="input-group">
+                <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." onkeypress="handleKeyPress(event)">
+                <button class="send-btn" onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón flotante para abrir -->
+    <button class="chatbot-toggle" onclick="toggleChatbot()">💬</button>
+</div>
+
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Creative Design js -->
+    <script src="assets/js/creative-design.js"></script>
+
+    <!-- Incluye el SDK de EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Incluye el archivo JavaScript -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Chatbot JavaScript -->
+    <script src="assets/js/chatbot.js">
+
+    </script>
+
+</body>
+
+</html>
