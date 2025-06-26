@@ -1,7 +1,7 @@
 {
   "name": "Code Cloud | Soluciones Con Código",
   "short_name": "Code Cloud",
-  "start_url": "./index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
