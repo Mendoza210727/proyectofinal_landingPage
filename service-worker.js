@@ -10,8 +10,8 @@ self.addEventListener("install", function (e) {
         "./assets/vendors/jquery/jquery-3.4.1.js",
         "./assets/vendors/bootstrap/bootstrap.bundle.js",
         "./assets/vendors/bootstrap/bootstrap.affix.js",
-        "./assets/imgs/icon-192.png",
-        "./assets/imgs/icon-512.png"
+        /* "./assets/imgs/icon-192.png",
+        "./assets/imgs/icon-512.png" */
       ]);
     })
   );
