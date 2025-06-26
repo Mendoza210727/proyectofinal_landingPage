@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Creative Design landing page.">
     <meta name="author" content="Devcrud">
-    <link rel="manifest" href="assets/manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#007bff">
     <title>Code Cloud | Soluciones Con Codigo</title>
 
@@ -531,11 +531,14 @@
 
     </script>
     <!-- PWO -->
-    <script>
+<script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js')
-      .then(() => console.log("✅ Service Worker registrado"))
-      .catch(err => console.error("❌ Error al registrar SW:", err));
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(function(reg) {
+        console.log('Service Worker registrado', reg);
+      }).catch(function(err) {
+        console.error('Error al registrar el SW', err);
+      });
   }
 </script>
 
