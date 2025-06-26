@@ -1,0 +1,21 @@
+{
+  "name": "Code Cloud | Soluciones Con Código",
+  "short_name": "Code Cloud",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "imgs/logo_code_cloud.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "imgs/logo_code_cloud.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
